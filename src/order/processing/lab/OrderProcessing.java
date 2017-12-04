@@ -22,6 +22,7 @@ import java.util.regex.Matcher;
 public class OrderProcessing extends OrderProcessingLab {
      Pattern orderP;
      BufferedReader br;
+     //Checks to see if File can be opened
 public void openFile(){
     try(BufferedReader br = new BufferedReader(new FileReader("Orders.txt")))
         {
@@ -33,7 +34,7 @@ public void openFile(){
             
         }
 }
-
+//Reads the order from the file
 public void readFile(){
   
    orderP = Pattern.compile("([0-9]{9})[|]([0-9]{9})[|]([0-9]{9})[|]([0-9]{9})");
@@ -64,7 +65,7 @@ public void processFile(){
             String orderTwo = orderM.group(2);
             String orderThree = orderM.group(3);
             String orderFour = orderM.group(4);
-            System.out.println("Order ID:   "+ orderOne + "\n" + "Part Num:   " + orderTwo + "\n" + "Price:   " + orderThree +"\n"+ "Quantity:   "+ orderFour + "Tax:   " + "Shipping:   " + "Total:   " + (orderThree + orderFour));
+            System.out.println("Order ID:   "+ orderOne + "\n" + "Part Num:   " + orderTwo + "\n" + "Price:   " + orderThree +"\n"+ "Quantity:   "+ orderFour +"\n" + "Tax:   " +"\n"+ "Shipping:   " +"\n" + "Total:   " + (orderThree + orderFour));
             }
         }
         catch (IOException ex) {
