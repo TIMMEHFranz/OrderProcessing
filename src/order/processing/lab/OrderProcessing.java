@@ -41,7 +41,7 @@ public void readFile(){
    System.out.println("File has been read.");
    
 }
-
+//Writes the order to the new file
 public void processFile(){
     System.out.println("Started processing orders.");
       FileWriter nameOut;
